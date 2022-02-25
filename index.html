@@ -13,14 +13,9 @@
     background-color: #ecf0f5;
     color:black;
   text-align: center;
-
-    
+  
   }
  
-    
-   
-
-
 div.topo{
   background-color: #2596be;
   width:105%;
@@ -34,6 +29,7 @@ div.topo{
 font-family: 'Saira Condensed', sans-serif;
 }
 div#navbar{
+  margin-top: 30px;
   background-color: #63a4c9;
   width: 105%;
   height: 60px;
@@ -80,7 +76,7 @@ div.data{
   
 }
 div#aside{
-  text-align: left;
+ text-align: left;
  background-color: #363636;
  width:200px;
  height: 100%;
@@ -90,7 +86,8 @@ margin-top: 90px;
  margin-left: -8px;
 }
 span{
-margin-left:70%;
+margin-top: -15px;
+margin-left:88%;
 position:absolute;
 }
 </style>
@@ -106,7 +103,7 @@ position:absolute;
 <body>
   
   <div class="topo">GPOnline</div><br>
-  <div id="navbar">
+  <div id="navbar"><br>
     <img src="navbar.png" width="35px" text-align="right"onclick="lateral()"> <span>
       <img src="avatar.png" width="50px"></span>
       </div>
@@ -175,7 +172,7 @@ position:absolute;
   <script>
   function lateral(){
 var press=document.getElementById('lateral')
-press.innerHTML=(`<div id="aside">teste</div>   <div id="navbar">
+press.innerHTML=(`<div id="aside">teste</div>   <div id="navbar"><br>
     <img src="navbar.png" width="35px" text-align="right"onclick="history.go(0)"> <span>
       <img src="avatar.png" width="50px"></span>
       </div>`)
