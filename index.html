@@ -1,229 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Saira+Condensed:wght@500;600&display=swap" rel="stylesheet">
-<style>
-  body{
-    font-size: 10px;
-    background-color: #ecf0f5;
-    color:black;
-  text-align: center;
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Saira+Condensed:wght@500;600&display=swap" rel="stylesheet">
+  <style>
   
-  }
- 
-div.topo{
-  background-color: #2596be;
-  width:105%;
-  height:100px;
-  position: fixed;
-  margin-top: -8px;
-  margin-left: -25px;
-  color: white;
-  font-size: 40px;
-  font-family: 'Bebas Neue', cursive;
-font-family: 'Saira Condensed', sans-serif;
-}
-div#navbar{
-  margin-top: 30px;
-  background-color: #63a4c9;
-  width: 105%;
-  height: 60px;
-  position: fixed;
-  margin-left: -8px;
-  margin-top: 30px;
-  text-align: left;
-  
-}
-div.botao{
-  
-  background-color: black;
-  width: 100%;
-  height: 50px;
-  color:white;
-  
-}
-p{
-  font-size: 15px;
-  color: #2596be;
-  font-weight: bold;
-  
-}
-div.block{
-  text-align: center!important;
-  border:solid 1px black;
- background-color: white;
-  width:210px;
-  height:359px;
-  float:left;
-  margin-inline: 10px;
-  margin-bottom: 10px;
- margin-left: 75px;
- 
-}
-div#recados{
-  font-size: 10px;
-  
-  
-}
+  /* Corpo da página*/
+    body {
+      font-size: 10px;
+      background-color: #ecf0f5;
+      color: black;
+      text-align: center;
 
-div.data{
-  font-size: 15px;
-  
-}
-div#aside{
- text-align: left;
- background-color: #363636;
- width:200px;
- height: 100%;
- position:fixed;
-margin-top: 90px;
 
- margin-left: -8px;
-}
-span{
-margin-top: -15px;
-margin-left:88%;
-position:absolute;
-}
-</style>
+    }
+/* topo azul forte */
+    div.topo {
+      background-color: #2596be;
+      width: 105%;
+      height: 70px;
+      position: fixed;
+      margin-top: -8px;
+      margin-left: -25px;
+      color: white;
+      font-size: 40px;
+      font-family: 'Bebas Neue', cursive;
+      font-family: 'Saira Condensed', sans-serif;
+    }
+/* topo azul claro */
+    div#navbar {
+      margin-top: 30px;
+      background-color: #63a4c9;
+      width: 105%;
+      height: 60px;
+      position: fixed;
+      margin-left: -8px;
+      margin-top: 20px;
+      text-align: left;
+
+    }
+  /* fonte de titulo do feed*/
+    p {
+      font-size: 15px;
+      color: #2596be;
+      font-weight: bold;
+
+    }
+/* Bloco de feed*/
+    div.block {
+      text-align: center !important;
+      border: solid 1px black;
+      background-color: white;
+      width: 210px;
+      height: 359px;
+      float: left;
+      margin-inline: 10px;
+      margin-bottom: 10px;
+      margin-left: 75px;
+
+    }
+/* fonte de recados e de data  */
+    div#recados {
+      font-size: 10px;
+
+
+    }
+
+    div.data {
+      font-size: 15px;
+
+    }
+/*menu lateral */
+    div#aside {
+       background-color: #363636;
+       width:180px;
+       height: 100%;
+       position:fixed;
+       margin-top: 80px;
+       margin-left: -50px;
+    }
+
+    span {
+      margin-top: -20px;
+      margin-left: 80%;
+      position: fixed;
+      font-size: 30px;
+    }
+    @media(max-width:480px){
+      span{
+        margin-left:50%;
+      }
+    }
+  </style>
   <title>HTML</title>
-  
+
   <!-- HTML -->
-  
+
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  
+
   <div class="topo">GPOnline</div><br>
-  <div id="navbar"><br>
-    <img src="navbar.png" width="35px" text-align="right"onclick="lateral()"> <span>
-      <img src="avatar.png" width="50px"></span>
-      </div>
+  <div id="navbar">
+   <br> <img src="navbar.png" width="40px" text-align="right" onclick="lateral()"> <span>📨🔔<img src="avatar.png" width="50px"></span>
   </div>
-   
-    <div id="lateral"></div>
-     <div id="res"></div>
+  </div>
+
+  <div id="lateral"></div>
+  <div id="res"></div>
   <br><br><br>
   <br>
- <div id="recados" >Feed de <strong>Recados</strong><br></div>
-  
- <div id="public1" onclick="conteudo()"
->
-     <br>
-  
-      <div class="block"  >
-     <p> A pandemia ainda não acabou</p>
-         <img src="imgs/Pandemia.png" height="260px"width="190px"><br>
-       
-        
-      <div class="data" align="right">  🕐Postado em 20/fev/21 
-        </div>
- 
-     
+  <div id="recados">Feed de <strong>Recados</strong><br></div>
+
+  <div id="public1" onclick="conteudo()">
+    <br>
+
+    <div class="block">
+      <p> A pandemia ainda não acabou</p>
+      <img src="imgs/Pandemia.png" height="260px" width="190px"><br>
+
+
+      <div class="data" align="right"> 🕐Postado em 20/fev/21
+      </div>
+
+
     </div>
- </div>
-    
-   
+  </div>
+
+
   <div id="public2" onclick="conteudo2()" align="center">
-  
+
     <div class="block">
       <p>Cigarro</p>
-        <img src="imgs/cigarro.jpg" height="260px"width="190px"><br>
-        
-        
+      <img src="imgs/cigarro.jpg" height="260px" width="190px"><br>
+
+
       <div class="data">
-          🕐Postado em 20/fev/21 
-       
-        </div>
-       
-    
-    
+        🕐Postado em 20/fev/21
+
+      </div>
+
+
+
     </div>
-     <div class="block"  >
-     <p>6 atitudes que te deixam cansado</p>
-         <img src="imgs/sono.jpg" height="260px"width="190px"><br>
-       
-        
-      <div class="data" align="right">  🕐Postado em 20/fev/21 
-        </div>
- 
-     
+    <div class="block">
+      <p>6 atitudes que te deixam cansado</p>
+      <img src="imgs/sono.jpg" height="260px" width="190px"><br>
+
+
+      <div class="data" align="right"> 🕐Postado em 20/fev/21
+      </div>
+
+
     </div>
- </div>
-   <div class="block">
-     <p> Como ter mais energia⚡</p>
-     <img src="imgs/atitudes.jpg" height="260px" width="190px"><br>
-  
-  
-     <div class="data" align="right"> 🕐Postado em 20/fev/21
-     </div>
-  
-  
-   </div>
-   </div>
+  </div>
+  <div class="block">
+    <p> Como ter mais energia⚡</p>
+    <img src="imgs/atitudes.jpg" height="260px" width="190px"><br>
+
+
+    <div class="data" align="right"> 🕐Postado em 20/fev/21
+    </div>
+
+
+  </div>
+  </div>
   <script>
-  function lateral(){
-var press=document.getElementById('lateral')
-press.innerHTML=(`<div id="aside">teste</div>   <div id="navbar"><br>
-    <img src="navbar.png" width="35px" text-align="right"onclick="history.go(0)"> <span>
-      <img src="avatar.png" width="50px"></span>
+    function lateral() {
+      var press = document.getElementById('lateral')
+      press.innerHTML = (`<div id="aside">teste<br>teste2<br>teste3</div> <div id="navbar">
+    <br><img src="navbar.png" width="40px" text-align="right"onclick="history.go(0)"> <span>📨🔔<img src="avatar.png" width="50px"></span>
       </div>`)
-  
-}
+
+    }
 
 
 
 
-  
-    function conteudo(){
-      document.getElementById('recados').style.display="none"
-     document.getElementById('public1').style.display="none"
-     
-     document.getElementById('public2').style.display="none"
-     
-    
-      
-      var pres=document.getElementById('res')
-      pres.innerHTML=(`
+
+    function conteudo() {
+      document.getElementById('recados').style.display = "none"
+      document.getElementById('public1').style.display = "none"
+
+      document.getElementById('public2').style.display = "none"
+
+
+
+      var pres = document.getElementById('res')
+      pres.innerHTML = (`
       <img src="imgs/Pandemia.png" width="500px">
      <br>
             <div id="voltar" onclick="history.go(0)">voltar</div> </body>`)
-            
-      
+
+
     }
-    
-      
-    function conteudo2(){
-      document.getElementById('recados').style.display="none"
-      
-     document.getElementById('public1').style.display="none"
-     
-     document.getElementById('public2').style.display="none"
-     
-   
-      var pres=document.getElementById('res')
-      pres.innerHTML=(`
+
+
+    function conteudo2() {
+      document.getElementById('recados').style.display = "none"
+
+      document.getElementById('public1').style.display = "none"
+
+      document.getElementById('public2').style.display = "none"
+
+
+      var pres = document.getElementById('res')
+      pres.innerHTML = (`
       <img src="imgs/cigarro.jpg" width="500px">
      <br><br>
             <div id="voltar" onclick="history.go(0)">voltar</div> </body>`)
-            
-      
+
+
     }
-    
-    
-    
-    
-    
-    
-    
   </script>
 </body>
+
 </html>
