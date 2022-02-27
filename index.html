@@ -57,7 +57,7 @@
       border: solid 1px black;
       background-color: white;
       width: 210px;
-      height: 359px;
+      height: 380px;
       float: left;
       margin-inline: 10px;
       margin-bottom: 10px;
@@ -119,23 +119,29 @@
   <br><br><br>
   <br>
   <div id="recados">Feed de <strong>Recados</strong><br></div>
-
-  <div id="public1" onclick="conteudo()">
-    <br>
-
+  
+<!---primeira publicação--->
     <div class="block">
+  <div id="public1">
+    
+
       <p> A pandemia ainda não acabou</p>
-      <img src="imgs/Pandemia.png" height="260px" width="190px"><br>
-
-
-      <div class="data" align="right"> 🕐Postado em 20/fev/21
+      <div id="img1">
+      <img src="imgs/Pandemia.png" height="260px" width="190px" onclick="conteudo()"><br>
+</div>
+<!--Botão de curtir-->
+      <div onclick="like()">
+       <div id="likes">👍</div>
+       </div>
+      <div class="data" align="right">
+         🕐Postado em 20/fev/21
       </div>
 
 
     </div>
   </div>
 
-
+<!--segunda publicação-->
   <div id="public2" onclick="conteudo2()" align="center">
 
     <div class="block">
@@ -151,6 +157,7 @@
 
 
     </div>
+    <!--Terceira publicação-->
     <div class="block">
       <p>6 atitudes que te deixam cansado</p>
       <img src="imgs/sono.jpg" height="260px" width="190px"><br>
@@ -162,6 +169,7 @@
 
     </div>
   </div>
+  <!--Quarta Publicação-->
   <div class="block">
     <p> Como ter mais energia⚡</p>
     <img src="imgs/atitudes.jpg" height="260px" width="190px"><br>
@@ -174,6 +182,7 @@
   </div>
   </div>
   <script>
+  /* Botão Lateral */
     function lateral() {
       var press = document.getElementById('lateral')
       press.innerHTML = (`<div id="aside">teste<br>teste2<br>teste3</div> <div id="navbar">
@@ -183,17 +192,16 @@
     }
 
 
-
-
+/*Primeira Publicação*/
 
     function conteudo() {
+      /* código de limpar conteudo para o js exibir só a imagem da publicação*/
       document.getElementById('recados').style.display = "none"
       document.getElementById('public1').style.display = "none"
 
       document.getElementById('public2').style.display = "none"
-
-
-
+      
+      /* codigo de aumentar a imagem + botao voltar */
       var pres = document.getElementById('res')
       pres.innerHTML = (`
       <img src="imgs/Pandemia.png" width="500px">
@@ -203,7 +211,7 @@
 
     }
 
-
+/* segunda publicação */
     function conteudo2() {
       document.getElementById('recados').style.display = "none"
 
@@ -220,6 +228,17 @@
 
 
     }
+    /*botão de curtir*/
+    var soma=0
+    var pres=document.getElementById('likes')
+    function like(){   
+      soma++
+    pres.innerHTML=(`👍${soma}`)
+    window.alert(`Você curtiu isso😍`)
+    
+      
+    
+  }
   </script>
 </body>
 
